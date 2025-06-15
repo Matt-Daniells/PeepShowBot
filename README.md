@@ -11,18 +11,21 @@ PeepScript is a Python-based Twitter bot that sequentially posts lines from a TV
 <br/><br/>
 project/
 
-  - tweetrunner.py        # Main bot runner script
+  - tweetrunner.py
+  > Main bot runner script
 
-  - auth.py               # Tweepy API and client initialization
+  - auth.py
+  > Tweepy API and client initialization
 
-  - scripts/          # Folder of season/episode scripts
+  - scripts/ `Folder of scripts`
+    - 1/ `Season 1`
+      - 1 `Episode 1`
+        - 1.txt `Transcript`
+        - img/ `Image folder`
+          - 1.jpg `Image file`
 
-    -  1                  # Season 1 
-        - 1.txt           # Episode 1
-        - img            # Episode 1 image folder
-             - 1.png  # image file
-
-  - cur.txt               # Saved state: current season, episode, and line
+  - cur.txt
+  > Saved state: current season, episode, and line
 
 <br/><br/>
 _I've included an exemplar folder for scripts in the repository, based on a show with 4 seasons of 5 episodes each. You can add more folders depending on the size of the show._
