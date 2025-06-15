@@ -56,13 +56,13 @@ class TweepyInitialisation:
             Exception: If authentication fails.
         """
         try:
-            api_key = get_required_env("API_KEY")
-            api_key_secret = get_required_env("API_KEY_SECRET")
+            consumer_key = get_required_env("CONSUMER_KEY")
+            consumer_secret = get_required_env("CONSUMER_SECRET")
             access_token = get_required_env("ACCESS_TOKEN")
-            access_token_secret = get_required_env("ACCESS_TOKEN_SECRET")
+            access_token_secret = get_required_env("ACCESS_SECRET")
 
             # Create OAuth1 handler and authenticate
-            auth = tweepy.OAuth1UserHandler(api_key, api_key_secret, access_token, access_token_secret)
+            auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
             logging.info("OAuth1 authentication created.")
             return tweepy.API(auth)
         except Exception as e:
@@ -83,10 +83,10 @@ class TweepyInitialisation:
         try:
             api = tweepy.Client(
                 bearer_token=os.environ.get("BEARER_TOKEN"),
-                consumer_key=os.environ.get("API_KEY"),
-                consumer_secret=os.environ.get("API_KEY_SECRET"),
+                consumer_key=os.environ.get("CONSUMER_KEY"),
+                consumer_secret=os.environ.get("CONSUMER_SECRET"),
                 access_token=os.environ.get("ACCESS_TOKEN"),
-                access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET")
+                access_token_secret=os.environ.get("ACCESS_SECRET")
             )
             logging.info("Tweepy Client API connected.")
             return api

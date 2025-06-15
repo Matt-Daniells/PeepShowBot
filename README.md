@@ -39,13 +39,13 @@ _I've included an exemplar folder for scripts in the repository, based on a show
 
 ### Set these environment variables in your system, they are required for authentication between X API and Tweepy. You can get these tokens by creating an X developer account.
 
-`API_KEY=*Example consumer_key*`
+`CONSUMER_KEY=*Example consumer_key*`
 
-`API_KEY_SECRET=*Example consumer_key_secret*`
+`CONSUMER_SECRET=*Example consumer_key_secret*`
 
 `ACCESS_TOKEN=*Example access_token*`
 
-`ACCESS_TOKEN_SECRET=*Example access_token_secret*`
+`ACCESS_SECRET=*Example access_token_secret*`
 
 `BEARER_TOKEN=*Example bearer_token*`
 <br/><br/>
